@@ -1,0 +1,35 @@
+
+
+
+Start a ubuntu machine on AWS
+get the public DNS 
+ec2-52-39-156-144.us-west-2.compute.amazonaws.com
+ssh to that DNS 
+ssh -i ~/.ssh/my-keypair.pem ubuntu@ec2-52-39-156-144.us-west-2.compute.amazonaws.com
+set up virtual environment
+sudo pip install --upgrade virtualenv
+virtualenv --no-site-packages venv
+source venv/bin/activate
+(copy requirements.txt)
+pip install -r requirements.txt
+mkdirs
+mkdir templates
+mkdir static
+mkdir homework
+copy files over
+cd templates
+scp -i ~/.ssh/my-keypair.pem  * ubuntu@ec2-52-39-156-144.us-west-2.compute.amazonaws.com:templates
+cd ../static
+scp -i ~/.ssh/my-keypair.pem  * ubuntu@ec2-52-39-156-144.us-west-2.compute.amazonaws.com:static
+cd ..
+scp -i ~/.ssh/my-keypair.pem  * ubuntu@ec2-52-39-156-144.us-west-2.compute.amazonaws.com:
+open port 5000
+sudo ufw allow 5000
+register with github API
+https://github.com/settings/applications/new
+callback url example: http://ec2-52-39-156-144.us-west-2.compute.amazonaws.com:5000/callback/github
+copy github API tokens into app.py
+python app.py
+connect
+http://ec2-52-39-156-144.us-west-2.compute.amazonaws.com:5000/
+
