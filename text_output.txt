@@ -1,0 +1,13 @@
+total 88
+-rwxr-xr-x@ 1 morgan  staff   1083 Dec 30 23:40 LICENSE
+-rwxr-xr-x@ 1 morgan  staff     40 Dec 30 23:40 README.md
+-rwxr-xr-x@ 1 morgan  staff   3441 Feb 10 16:17 app.py
+-rw-r--r--  1 morgan  staff  12288 Feb  9 11:45 db.sqlite
+drwxr-xr-x  2 morgan  staff     68 Feb  9 22:15 newuploads
+-rwxr-xr-x@ 1 morgan  staff   3787 Dec 30 23:40 oauth.py
+-rw-r--r--  1 morgan  staff   4696 Feb  9 11:45 oauth.pyc
+-rwxr-xr-x@ 1 morgan  staff    205 Feb  9 13:16 requirements.txt
+drwxr-xr-x@ 5 morgan  staff    170 Feb  9 13:10 templates
+-rw-r--r--  1 morgan  staff      0 Feb 10 16:18 text_output.txt
+-rw-r--r--  1 morgan  staff    549 Feb  9 13:13 upload.py
+drwxr-xr-x  6 morgan  staff    204 Feb  9 13:12 venv

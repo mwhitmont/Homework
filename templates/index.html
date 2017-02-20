@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+
+{% if current_user.is_authenticated %}
+
+    <h2>Hi, {{ current_user.nickname }}!</h2>
+    <p>Select a file named "{{ commandbase }}" to upload. Unit tests will be run on your file.</p>
+
+    <form action = "{{ url_for('upload') }}" method = "POST" class="form-inline"
+     enctype = "multipart/form-data">
+     <div class="form-group">
+     <input class="btn btn-default" type = "file" name = "photo"/>
+      </div>
+     <div class="form-group">
+     <input class="btn btn-default" type="submit" value="Upload">
+      </div>
+
+    </form>
+
+    <p><h3><a href="{{ url_for('logout') }}">Logout</a></h3></p>
+{% else %}
+    <h2>I don't know you!</h2>
+    <!-- <p><a href="{{ url_for('oauth_authorize', provider='facebook') }}">Login with Facebook</a></p> -->
+    <p><a href="{{ url_for('oauth_authorize', provider='github') }}">Login with Github</a></p>
+{% endif %}
+
+
+
+{% endblock %}
